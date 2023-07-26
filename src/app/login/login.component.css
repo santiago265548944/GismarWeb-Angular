@@ -1,0 +1,26 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: grey;
+}
+.formulario {
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  width: 40%;
+}
+.letra {
+  color: #168cb9;
+}
+
+.ingresar {
+  padding: 8px 15px;
+  background: #10a9cb;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.ingresar:hover {
+  color: black;
+}

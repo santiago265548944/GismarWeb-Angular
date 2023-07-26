@@ -1,0 +1,515 @@
+<app-navbar></app-navbar>
+<div id="mapContainer">
+  <button
+    class="toggle-btn"
+    type="button"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#offcanvasScrolling"
+    aria-controls="offcanvasRight"
+  >
+    <i class="fa-sharp fa-solid fa-bars"></i>
+  </button>
+  <div
+    class="offcanvas offcanvas-end"
+    data-bs-scroll="true"
+    data-bs-backdrop="false"
+    tabindex="-1"
+    id="offcanvasScrolling"
+    aria-labelledby="offcanvasScrollingLabel"
+  >
+    <div
+      class="offcanvas-header d-flex justify-content-between align-items-start"
+    >
+      <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+        TABLA DE CONTENIDO
+      </h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="offcanvas-body">
+      <p>
+        <a
+          class="btn comercial"
+          data-bs-toggle="collapse"
+          href="#multiCollapseExample1"
+          role="button"
+          aria-expanded="false"
+          aria-controls="multiCollapseExample1"
+          >Comercial</a
+        >
+      </p>
+      <div class="row">
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="Arpon()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Arpon
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="Armarios()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Armarios
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="TextoRurales()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Textos Rurales
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="Taps()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Taps
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="Fibra()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  MDU's Fibra
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="NAPS()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  NAPS
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="Cajas()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Cajas
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="HFC()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  MDU's HFC
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="Strip()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Strips
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="GabinetesOp()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Gabinetes Ópticos
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="NodosOp()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Nodo Óptico
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="Postes()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Postes
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="Camaras()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Camaras
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="Carcamos()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Carcamos
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="CableCoaxial()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Cable Coaxial
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="Tramos()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Tramos
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="FibraOptica()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Fibra Óptica
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="ReservaFO()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Reservas FO
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="LimitesRurales()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Limites Rurales
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="ConstruccionesRU()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Construcciones Rurales
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="ZonificacionArpones()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Zonificación de Arpones
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="AreaMSAN()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Área de MSAN
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="AreaNodos()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Área de Nodos
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="Mantenimiento()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Zonas de Mantenimiento
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="AreaDistrito()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Área de Distrito
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="AreaCentral()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Área de Central
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="Placas()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Placas
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="Lotes()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Lotes
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="MallaVial()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Malla Vial
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="Hidrografia()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Hidrografía
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="LimitesConstrucion()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Límite de construcción
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="Manzanas()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Manzanas
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="Estratificacion()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Estratificación
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="Barrios()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Barrios
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  (checked)="(checkboxstate)"
+                  (click)="Municipios()"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Municipios
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas-footer">
+      <button (click)="cerrarSesion()" class="cerrar btn btn-success">
+        cerrar sesiòn
+      </button>
+    </div>
+  </div>
+</div>

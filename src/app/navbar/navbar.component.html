@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/logoGismart.png"
+      type="image/x-icon"
+    />
+    <title>Gismar Web</title>
+  </head>
+  <body>
+    <mat-tab-group
+      mat-stretch-tabs="false"
+      mat-align-tabs="center"
+      class="header"
+    >
+      <img src="assets/img/logoGismart.png" alt="logoGismart" />
+
+      <mat-tab label="Home">
+        <div class="home">
+          <img src="assets/img/logoGismart.png" alt="logoGismart" />
+        </div>
+      </mat-tab>
+      <mat-tab label="Herramientas">
+        <div class="herramientas text-center">
+          <div class="row">
+            <div class="col">
+              <p>Navegación</p>
+              <button
+                (click)="zoomIn()"
+                type="button"
+                class="btn btn-outline-dark"
+              >
+                <i
+                  class="fa-sharp fa-solid fa-magnifying-glass-plus"
+                ></i></button
+              >&nbsp;
+              <button
+                (click)="zoomOut()"
+                type="button"
+                class="btn btn-outline-dark"
+              >
+                <i
+                  class="fa-sharp fa-solid fa-magnifying-glass-minus"
+                ></i></button
+              >&nbsp;
+
+              <button
+                (click)="vistaTotal()"
+                type="button"
+                class="btn btn-outline-dark"
+              >
+                <i class="fa-sharp fa-solid fa-earth-americas"></i></button
+              >&nbsp;
+              <button
+                (click)="anterior()"
+                type="button"
+                class="btn btn-outline-dark"
+              >
+                <i class="fa-sharp fa-solid fa-circle-arrow-left"></i></button
+              >&nbsp;<button
+                (click)="siguiente()"
+                type="button"
+                class="btn btn-outline-dark"
+              >
+                <i class="fa-sharp fa-solid fa-circle-arrow-right"></i>
+              </button>
+            </div>
+            <div class="col">
+              <p>Herramientas</p>
+              <button
+                (click)="startMeasurement()"
+                type="button"
+                class="btn btn-outline-dark"
+              >
+                <i class="fa-sharp fa-solid fa-ruler-horizontal"></i></button
+              >&nbsp;<button
+                (click)="identify()"
+                type="button"
+                class="btn btn-outline-dark"
+              >
+                <i class="fa-sharp fa-solid fa-circle-info"></i></button
+              >&nbsp;<button
+                type="button"
+                class="btn btn-outline-dark"
+                data-bs-toggle="modal"
+                data-bs-target="#modalAcercamiento"
+              >
+                <i class="fa-sharp fa-solid fa-magnifying-glass-plus"></i>
+              </button>
+            </div>
+            <div class="col">
+              <p>Graficos</p>
+              <button
+                (click)="stopMeasurement()"
+                type="button"
+                class="btn btn-outline-dark"
+              >
+                <i class="fa-sharp fa-solid fa-broom"></i></button
+              >&nbsp;
+              <button
+                (click)="basemapGallery()"
+                type="button"
+                class="btn btn-outline-dark"
+              >
+                <i class="fa-sharp fa-solid fa-book"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Consultas">
+        <div class="consultas text-center">
+          <div class="row">
+            <div class="col">
+              <p>Búsqueda</p>
+              <button
+                type="button"
+                class="btn btn-outline-dark"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >
+                <i class="fa-sharp fa-solid fa-binoculars"></i>
+              </button>
+              <p>Redes</p>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+    <!-- Modal boton acercamiento -->
+    <div
+      class="modal fade"
+      id="modalAcercamiento"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="headerAcercamiento modal-header">
+            <h4 class="modal-title" id="staticBackdropLabel">ACERCAMIENTO</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <label type="text">País</label>
+            <div class="col-sm-7">
+              <select class="acercts form-select" aria-label=" select example">
+                <option selected>Seleccióne</option>
+                <option selected>Colombia</option>
+              </select>
+            </div>
+            <label type="text">Departamento</label>
+            <div class="col-sm-7">
+              <select
+                class="acercts form-select"
+                aria-label=" select example"
+              ></select>
+            </div>
+            <label type="text">Municipios</label>
+            <div class="col-sm-7">
+              <select
+                class="acercts form-select"
+                aria-label=" select example"
+              ></select>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Acercar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal boton de redes -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="headerRedes modal-header">
+            <h4 class="modal-title" id="staticBackdropLabel">CONSULTA REDES</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+              <mat-tab label="NAP"
+                ><div>
+                  <label>Nodos:</label>
+                  <div class="col-sm-7">
+                    <select
+                      class="acercts form-select"
+                      aria-label=" select example"
+                    >
+                      <option selected>Seleccione</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <label for="">Arpones:</label>
+                  <div class="col-sm-7">
+                    <select
+                      class="acercts form-select"
+                      aria-label=" select example"
+                    >
+                      <option selected></option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <label for="">NAPS:</label>
+                  <div class="col-sm-7">
+                    <select
+                      class="acercts form-select"
+                      aria-label=" select example"
+                    >
+                      <option selected></option>
+                    </select>
+                  </div></div
+              ></mat-tab>
+              <mat-tab label="Cajas & Taps"
+                ><div>
+                  <p>Seleccione elemento</p>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" />
+                    <label> Consultar Cajas </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#ActivaTaps"
+                    />
+                    <label> Consultar Taps </label>
+                    <div class="col-sm-5 card-body" id="ActivaTaps">
+                      <p>Cod. Open</p>
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div></div
+              ></mat-tab>
+            </mat-tab-group>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <app-map></app-map> -->
+  </body>
+</html>

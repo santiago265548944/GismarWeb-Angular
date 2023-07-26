@@ -1,0 +1,103 @@
+/* body {
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+a:hover {
+  color: currentColor;
+}
+header {
+  width: 100%;
+  height: 35px;
+  background-color: #e3f2fd;
+}
+header .container-fluid {
+  width: 100%;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+img {
+  width: 18%;
+}
+header .navb-items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  letter-spacing: 60px;
+}
+header .item {
+  text-align: center;
+  margin-inline: 10%;
+  font-size: 15px;
+  letter-spacing: 3px;
+  color: #102447;
+  padding: 1px 50;
+  transition: all 0.1s ease;
+  border-bottom: 0px solid #64d6f4;
+  border-top: 0px solid #64d6f4;
+  cursor: pointer;
+}
+header .item:hover {
+  border-bottom: 3px solid #64d6f4;
+  border-top: 3px solid #64d6f4;
+}
+.dropdown-menu {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  overflow: hidden;
+} */
+/* .mat-tab-group {
+  margin-bottom: 48px;
+} */
+.header {
+  background-color: #e3f2fd;
+  margin-top: -1%;
+}
+.row {
+  height: 100px;
+}
+.home {
+  width: 98%;
+}
+.home img {
+  width: 120px;
+  height: 100px;
+}
+.herramientas {
+  width: 98%;
+}
+.consultas {
+  width: 98%;
+}
+.btn {
+  border-radius: 40%;
+  color: black;
+  box-shadow: 0 5px #999;
+  margin-top: 0%;
+}
+.btn:hover {
+  background-color: white;
+}
+.btn:active {
+  background-color: black;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+.headerAcercamiento {
+  background-color: #e3f2fd;
+}
+.headerAcercamiento h4 {
+  position: relative;
+  left: 30%;
+}
+.headerRedes {
+  background-color: #e3f2fd;
+}
+.headerRedes h4 {
+  position: relative;
+  left: 30%;
+}
